@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5174D5A7-3F51-4C03-8354-73E9F3856D64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS</RootNamespace>
+    <AssemblyName>WMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.1046.0, Culture=neutral, PublicKeyToken=09af7300eec23701" />
+    <Reference Include="Devart.Data.Universal, Version=3.50.751.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.ChartView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.PivotGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.Themes.Desert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.Themes.Windows8.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikData, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2015.1.331.40\TelerikData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Library\DB\DbUtil.cs" />
+    <Compile Include="Library\DB\Queries.cs" />
+    <Compile Include="Library\DB\Queries_Lists.cs" />
+    <Compile Include="Library\DB\Tables\Bin_table.cs" />
+    <Compile Include="Library\DB\Tables\Item_Journal_Header_Table.cs" />
+    <Compile Include="Library\DB\Tables\Item_table.cs" />
+    <Compile Include="Library\DB\Tables\Location_table.cs" />
+    <Compile Include="Library\DB\Tables\Manufacturer_table.cs" />
+    <Compile Include="Library\DB\Tables\Model_table.cs" />
+    <Compile Include="Library\DB\Tables\Users_Table.cs" />
+    <Compile Include="Library\DB\WhereClause.cs" />
+    <Compile Include="Library\Tools\Build.cs" />
+    <Compile Include="Library\Tools\encr.cs" />
+    <Compile Include="Library\Tools\Get.cs" />
+    <Compile Include="Library\Tools\Globals.cs" />
+    <Compile Include="Library\Tools\NavBar.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ArtikelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ArtikelList.Designer.cs">
+      <DependentUpon>ArtikelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ItemBarcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ItemBarcode.Designer.cs">
+      <DependentUpon>ItemBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer_FORM.Designer.cs">
+      <DependentUpon>ReportViewer_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestourantForms\ProductCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestourantForms\ProductCard.Designer.cs">
+      <DependentUpon>ProductCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestourantForms\ProductsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestourantForms\ProductsList.Designer.cs">
+      <DependentUpon>ProductsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCard.Designer.cs">
+      <DependentUpon>UserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\Bin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\Bin.Designer.cs">
+      <DependentUpon>Bin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\BinCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\BinCard.Designer.cs">
+      <DependentUpon>BinCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\ItemCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\ItemCard.Designer.cs">
+      <DependentUpon>ItemCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\ItemJournalHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\ItemJournalHeader.Designer.cs">
+      <DependentUpon>ItemJournalHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\ItemOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\ItemOperations.Designer.cs">
+      <DependentUpon>ItemOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\LocationCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\LocationCard.Designer.cs">
+      <DependentUpon>LocationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\ManufacturerCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\ManufacturerCard.Designer.cs">
+      <DependentUpon>ManufacturerCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\Manufacturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\Manufacturers.Designer.cs">
+      <DependentUpon>Manufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\ModelCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\ModelCard.Designer.cs">
+      <DependentUpon>ModelCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseForms\Models.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseForms\Models.Designer.cs">
+      <DependentUpon>Models.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ArtikelList.resx">
+      <DependentUpon>ArtikelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ItemBarcode.resx">
+      <DependentUpon>ItemBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer_FORM.resx">
+      <DependentUpon>ReportViewer_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestourantForms\ProductCard.resx">
+      <DependentUpon>ProductCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestourantForms\ProductsList.resx">
+      <DependentUpon>ProductsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCard.resx">
+      <DependentUpon>UserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\Bin.resx">
+      <DependentUpon>Bin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\BinCard.resx">
+      <DependentUpon>BinCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\ItemCard.resx">
+      <DependentUpon>ItemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\ItemJournalHeader.resx">
+      <DependentUpon>ItemJournalHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\ItemOperations.resx">
+      <DependentUpon>ItemOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\LocationCard.resx">
+      <DependentUpon>LocationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\ManufacturerCard.resx">
+      <DependentUpon>ManufacturerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\Manufacturers.resx">
+      <DependentUpon>Manufacturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\ModelCard.resx">
+      <DependentUpon>ModelCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseForms\Models.resx">
+      <DependentUpon>Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLs\Telerik.Reporting.dll" />
+    <Content Include="DLLs\Telerik.ReportViewer.WinForms.dll" />
+    <Content Include="DLLs\Telerik.WinControls.ChartView.dll" />
+    <Content Include="DLLs\Telerik.WinControls.dll" />
+    <Content Include="DLLs\Telerik.WinControls.GridView.dll" />
+    <Content Include="DLLs\Telerik.WinControls.PivotGrid.dll" />
+    <Content Include="DLLs\Telerik.WinControls.RadDock.dll" />
+    <Content Include="DLLs\Telerik.WinControls.Themes.Aqua.dll" />
+    <Content Include="DLLs\Telerik.WinControls.Themes.Breeze.dll" />
+    <Content Include="DLLs\Telerik.WinControls.Themes.Desert.dll" />
+    <Content Include="DLLs\Telerik.WinControls.Themes.TelerikMetro.dll" />
+    <Content Include="DLLs\Telerik.WinControls.Themes.TelerikMetroBlue.dll" />
+    <Content Include="DLLs\Telerik.WinControls.Themes.Windows8.dll" />
+    <Content Include="DLLs\Telerik.WinControls.UI.dll" />
+    <Content Include="DLLs\TelerikCommon.dll" />
+    <Content Include="DLLs\TelerikData.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
