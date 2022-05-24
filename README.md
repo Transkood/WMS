@@ -12,3 +12,5 @@ winforms, db, rights, integration-with-tms, microservices
 авторизация
 сопряжение с tms
 docker ignore и прочие докеровские штучки
+
+## how to install
