@@ -14,3 +14,6 @@ winforms, db, rights, integration-with-tms, microservices
 docker ignore и прочие докеровские штучки
 
 ## how to install
+
+
+# Windows Forms идите нахуй!
