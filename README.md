@@ -4,4 +4,5 @@ My implementation of console WMS
 ## how to install
 
 
-# Windows Forms идите нахуй!
+# Windows Forms идите нахуй! 
+(fuck you winforms)
