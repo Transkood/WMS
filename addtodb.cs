@@ -23,6 +23,12 @@ namespace WMS_i_guess
                // пока что вывод в консоль, завтра подредактирую, а то сейчас лень
                Console.WriteLine($"<{word}>");
                // разделяем по индексу
+               words [0] = name;
+               words [1] = weight;
+               words [2] = cityout;
+               words [3] = cityin;
+               words [4] = company;
+               words [5] = howmany;
            }
         }
     }
