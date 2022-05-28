@@ -8,10 +8,13 @@ namespace WMS_i_guess {
         static void Main(string[] args) {
             
             Console.ReadLine() = carindex;
-            carindex = message;
+        }
+    }
             
+    public class TcpClient : IDisposable {
             static void Connect(String server, String message)
             {
+                WMS.carindex = message;
                 try
                 {
     
@@ -57,5 +60,4 @@ namespace WMS_i_guess {
             }
         }
     }
-}
             
