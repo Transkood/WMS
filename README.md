@@ -6,3 +6,4 @@ My implementation of console WMS
 
 # Windows Forms идите нахуй! 
 (fuck you winforms)
+добавлю в 3.0
