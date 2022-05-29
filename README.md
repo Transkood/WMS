@@ -1,5 +1,5 @@
 # WMS-by-transkood
-My implementation of console WMS
+My implementation of WMS
 
 ## how to install
 
