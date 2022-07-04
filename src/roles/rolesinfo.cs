@@ -16,8 +16,8 @@ class Roles {
                 CanAddItemInfo = true;
                 CanSeeLog = true;
                 CanSeeDB = true;
-                CanSeeUsers = true;
-                CanSeeItemLog = true;
+                CanSeeUsers = false;
+                CanSeeItemLog = false;
             }
             var Priem {
                 CanAddTransportInfo = true;
