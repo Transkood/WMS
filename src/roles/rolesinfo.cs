@@ -8,7 +8,7 @@ class Roles {
                 CanAddItemInfo = true;
                 CanSeeLog = true;
                 CanSeeDB = true;
-                CanSeeUsers = true;
+                CanSeeWorkers = true;
                 CanSeeItemLog = true;
                 
             var Gruzchik {
@@ -16,7 +16,7 @@ class Roles {
                 CanAddItemInfo = true;
                 CanSeeLog = true;
                 CanSeeDB = true;
-                CanSeeUsers = false;
+                CanSeeWorkers = false;
                 CanSeeItemLog = false;
             }
             var Priem {
@@ -24,7 +24,7 @@ class Roles {
                 CanAddItemInfo = true;
                 CanSeeLog = true;
                 CanSeeDB = true;
-                CanSeeUsers = true;
+                CanSeeWorkers = true;
                 CanSeeItemLog = true;
             }
         }
