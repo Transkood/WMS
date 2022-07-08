@@ -27,6 +27,9 @@ class Roles {
                 CanSeeWorkers = true;
                 CanSeeItemLog = true;
             }
+            Console.Writeine("Admin Can: " +  CanAddTransportInfo, CanAddItemInfo, CanSeeLog, CanSeeDB, CanSeeWorkers, CanSeeItemLog);
+            Console.Writeine("Gruzchik Can: " +  CanAddTransportInfo, CanAddItemInfo, CanSeeLog, CanSeeDB, CanSeeWorkers, CanSeeItemLog);
+            Console.Writeine("Priem Can: " +  CanAddTransportInfo, CanAddItemInfo, CanSeeLog, CanSeeDB, CanSeeWorkers, CanSeeItemLog);
         }
     }
 }
